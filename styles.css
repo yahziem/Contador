@@ -1,0 +1,49 @@
+body {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contador-container {
+    text-align: center;
+    max-width: 90%;
+}
+
+.contador {
+    font-size: calc(2em + 2vw); /* Tamaño dinámico en función del ancho de la ventana */
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: glow 1s infinite alternate;
+}
+
+.frase {
+    font-size: calc(1em + 0.5vw); /* Ajuste dinámico de tamaño de fuente */
+    font-style: italic;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #057ff1, 0 0 20px #057ff1, 0 0 30px #057ff1;
+    }
+    to {
+        text-shadow: 0 0 20px #057ff1, 0 0 30px #057ff1, 0 0 40px #057ff1;
+    }
+}
+
+/* Media queries para ajustes adicionales en pantallas más pequeñas */
+@media (max-width: 600px) {
+    .contador {
+        font-size: 1.5em;
+    }
+
+    .frase {
+        font-size: 1em;
+    }
+}
